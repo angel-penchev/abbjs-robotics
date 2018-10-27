@@ -1,0 +1,78 @@
+html, body {
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+
+        background-size: cover;
+        background: linear-gradient(to bottom right, #36393F, #1B1E21) fixed;
+        background-repeat: no-repeat;
+}
+
+.wrapper > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1em;
+        color: #ffeead;
+}
+
+.wrapper {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50px 1fr 150px;
+        grid-template-rows: 75px 1fr 150px;
+}
+
+#navigation {
+        grid-column: span 1;
+        grid-row: span 4;
+        background-color: #262729;
+}
+
+#projectOptions {
+        grid-column: span 2;
+        grid-row: span 1;
+        background-color: #1B1E21;
+}
+
+#editor {
+        grid-column: span 1;
+        grid-row: span 1;
+        padding: 20px;
+}
+
+#objectProps {
+        grid-column: span 1;
+        grid-row: span 1;
+        background-color: #1E2123;
+}
+
+#playbackControls {
+        grid-column: span 2;
+        grid-row: span 1;
+        background-color: #1B1E21;
+}
+
+@media (max-width: 812px) {
+        .wrapper {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: 75px 1fr 100px;
+        }
+
+        #projectOptions, #editor, #playbackControls {
+                grid-column: span 1;
+                grid-row: span 1;
+        }
+
+        #navigation, #objectProps {
+                display: none;
+        }
+}
